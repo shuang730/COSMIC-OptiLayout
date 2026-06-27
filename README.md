@@ -20,7 +20,6 @@ An interactive optical layout design software developed in MATLAB for research l
   - Mirror
   - Beam splitter
   - Pinhole
-  - Camera
   - Surface
 - Adjustable optical element properties (position, rotation, size, focal length, numerical aperture, etc.)
 - Interactive drag-and-drop editing
