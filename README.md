@@ -47,7 +47,7 @@ Then drag MyAppInstaller_mcr.app into the Terminal window to automatically inser
 ## Windows
 
 Download the latest Windows version from the Releases page and run the installer.
----
+
 
 ## Source Code
 
