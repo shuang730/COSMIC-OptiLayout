@@ -11,19 +11,25 @@ An interactive optical layout design software developed in MATLAB for research l
 ## Features
 
 - Interactive optical layout editor
-- Ray tracing
-- Lens
-- Objective
-- Beam Splitter
-- Mirror
-- Pinhole
-- Camera
-- Surface
-- Point source
-- Multi-selection
-- Measurement tool
-- Save and load layouts
+- Real-time 2D ray tracing
+- Parallel beam source with adjustable beam width, angle, ray count, and color
+- Point source with customizable emission angles and ray colors
+- Optical elements including:
+  - Thin lens
+  - Objective
+  - Mirror
+  - Beam splitter
+  - Pinhole
+  - Camera
+  - Surface
+- Adjustable optical element properties (position, rotation, size, focal length, numerical aperture, etc.)
+- Interactive drag-and-drop editing
+- Box selection and multi-element editing
+- Distance measurement tool
+- Save and load optical layouts
 - Undo / Redo
+- Zoom and pan navigation
+- Cross-platform source code (MATLAB App Designer)
 
 ---
 
