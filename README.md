@@ -63,8 +63,7 @@ MIT License.
 
 ## Author
 
-**Shuang Liang**
-**Neeko Liang**
+**Shuang Liang**, **Neeko Liang**
 
 Department of Physics and Astronomy  
 University of Pittsburgh
