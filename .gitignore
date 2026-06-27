@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# MATLAB
+*.asv
+*.autosave
+*.mlappautosave
+
+# MATLAB Compiler outputs
+for_testing/
+for_redistribution/
+.DS_Store
+.DS_Store
