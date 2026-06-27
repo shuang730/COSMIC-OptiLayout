@@ -34,22 +34,19 @@ An interactive optical layout design software developed in MATLAB for research l
 
 ## Installation
 
-### macOS
+## macOS
 
-Download the latest version from the **Releases** page.
+Download the latest macOS version from the Releases page.
 
-If macOS reports that the installer is damaged, open **Terminal** and run:
+If macOS reports that “MyAppInstaller_mcr.app” is damaged and can’t be opened, open Terminal, type the following command (do not press Enter yet):
 
-```bash
-xattr -dr com.apple.quarantine "/path/to/MyAppInstaller_mcr.app"
-```
+xattr -dr com.apple.quarantine
 
-Then launch the installer again.
+Then drag MyAppInstaller_mcr.app into the Terminal window to automatically insert its path, press Enter, and launch the installer again.
 
-### Windows
+## Windows
 
-Windows version is under development.
-
+Download the latest Windows version from the Releases page and run the installer.
 ---
 
 ## Source Code
@@ -67,6 +64,7 @@ MIT License.
 ## Author
 
 **Shuang Liang**
+**Neeko Liang**
 
 Department of Physics and Astronomy  
 University of Pittsburgh
