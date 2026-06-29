@@ -19,45 +19,69 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;COSMIC OptiLayout&lt;/title&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: radial-gradient(circle at top, #18213f, #080b14 60%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #070b18;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 80px 10%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>min-height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 70px 8%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: space-between;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 20% 10%, #3454ff55, transparent 35%),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>radial-gradient(circle at 80% 20%, #8f5cff55, transparent 35%),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>linear-gradient(135deg, #070b18, #101735 60%, #050711);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero-text {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 620px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h1 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 58px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 1px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 64px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 0 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.05;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.subtitle {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 22px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #c7d2ff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 760px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 auto 35px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.tagline {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #cbd6ff;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 34px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.buttons a {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: inline-block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 14px 26px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.buttons {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 15px 24px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 999px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: translateY(-2px);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.primary {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #7c5cff;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 30px #7c5cff55;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.secondary {</span></p>
@@ -65,74 +89,164 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #dbe2ff;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 430px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 26px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 28px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.08);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.15);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 30px 90px rgba(0,0,0,0.45);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(16px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero-card img {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>section {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 50px 10%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 1100px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 80px 8%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 1200px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: auto;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.screenshot {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 30px 80px rgba(0,0,0,0.45);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h2 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 38px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.section-text {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #cbd6ff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.7;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 850px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.features {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: grid;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 34px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.08);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.15);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 22px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(10px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 22px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.075);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.14);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>min-height: 170px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card h3 {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #ffffff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 21px;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card p {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #cbd5ff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #cbd6ff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.55;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.screenshot {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 28px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 30px 90px rgba(0,0,0,0.5);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.12);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.download-box {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 22px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.download-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 28px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: linear-gradient(145deg, rgba(124,92,255,0.22), rgba(255,255,255,0.06));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.16);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.download-card h3 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 26px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>code {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 4px 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #e8ecff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>pre {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #050711;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>overflow-x: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #dbe2ff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.12);</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>footer {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 45px 8%;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #9ca8d8;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-top: 1px solid rgba(255,255,255,0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 900px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.hero {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.buttons {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>font-size: 46px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/head&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;COSMIC OptiLayout&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="subtitle"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>An interactive optical layout design and 2D ray-tracing tool developed in MATLAB for research laboratories.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="buttons"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a class="primary" href="https://github.com/shuang730/COSMIC-OptiLayout/releases/latest"&gt;Download Latest Version&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a class="secondary" href="https://github.com/shuang730/COSMIC-OptiLayout"&gt;View on GitHub&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="hero"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="hero-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h1&gt;COSMIC OptiLayout&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p class="tagline"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>A modern optical layout design and 2D ray-tracing tool developed in MATLAB for research laboratories.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="buttons"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a class="btn primary" href="https://github.com/shuang730/COSMIC-OptiLayout/releases/latest"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Download Latest Version</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a class="btn secondary" href="https://github.com/shuang730/COSMIC-OptiLayout"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>View on GitHub</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="hero-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;img src="screenshots/interface.png" alt="COSMIC OptiLayout Interface"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Overview&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>COSMIC OptiLayout helps users build, visualize, and modify 2D optical layouts with interactive ray tracing,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>adjustable optical components, measurement tools, and export options for documentation.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Designed for optical research&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="section-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>COSMIC OptiLayout helps researchers quickly build, visualize, and modify 2D optical layouts.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>It supports interactive ray tracing, adjustable optical components, measurement tools, and figure export</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>for experiment planning, discussion, reports, and presentations.</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;img class="screenshot" src="screenshots/interface.png" alt="COSMIC OptiLayout screenshot"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
@@ -140,59 +254,111 @@
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="features"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Real-time Ray Tracing&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Create parallel beams and point sources with adjustable angles, beam width, ray count, and colors.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Real-time 2D Ray Tracing&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Create and visualize optical paths interactively while editing the layout.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Light Sources&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Supports parallel beams and point sources with adjustable angle, beam width, ray count, and color.&lt;/p&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Optical Components&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Supports lenses, objectives, mirrors, beam splitters, pinholes, cameras, and surfaces.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Includes lenses, objectives, mirrors, beam splitters, pinholes, cameras, and surfaces.&lt;/p&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Editable Properties&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Modify position, rotation, diameter, focal length, NA, aperture, and other optical parameters.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Editable Parameters&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Adjust position, rotation, size, focal length, numerical aperture, aperture, and other properties.&lt;/p&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Measurement Tools&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Measure point-to-point and surface-to-surface distances directly in the layout.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Measure point-to-point and surface-to-surface distances directly in the optical layout.&lt;/p&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Export Figures&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Save optical layouts as PNG or PDF for reports, presentations, and documentation.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Export and Documentation&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Export layouts as PNG or PDF for reports, presentations, and lab documentation.&lt;/p&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Productivity Tools&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Includes undo/redo, save/load, box selection, alignment tools, zoom, pan, and view lock.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Includes save/load, undo/redo, box selection, alignment tools, zoom, pan, and view lock.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Cross-platform Release&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Precompiled macOS and Windows versions are available from GitHub Releases.&lt;/p&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Installation&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Screenshot&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="section-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Build optical systems visually and adjust component properties through an interactive interface.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;img class="screenshot" src="screenshots/interface.png" alt="COSMIC OptiLayout Screenshot"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h3&gt;macOS&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Download the latest macOS package from the Releases page.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;If macOS reports that the installer is damaged, open Terminal and run:&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;pre&gt;xattr -dr com.apple.quarantine&lt;/pre&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Then drag the installer into Terminal and press Enter.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Download&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="section-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Download the latest precompiled release for your operating system.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="download-box"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="download-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;macOS&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Download the latest macOS package from GitHub Releases.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a class="btn primary" href="https://github.com/shuang730/COSMIC-OptiLayout/releases/latest"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Download for macOS</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Windows&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Download the latest Windows installer from the Releases page and run the installer.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="download-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Windows&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Download the latest Windows installer from GitHub Releases.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a class="btn primary" href="https://github.com/shuang730/COSMIC-OptiLayout/releases/latest"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Download for Windows</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="download-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Source Code&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;View and download the MATLAB source code from GitHub.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a class="btn secondary" href="https://github.com/shuang730/COSMIC-OptiLayout"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Source on GitHub</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;macOS Installation Note&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="section-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>If macOS reports that &lt;strong&gt;MyAppInstaller_mcr.app&lt;/strong&gt; is damaged and cannot be opened,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>this is caused by macOS Gatekeeper. The installer is not actually damaged.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="section-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Open Terminal and run:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;pre&gt;xattr -dr com.apple.quarantine&lt;/pre&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="section-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Then drag &lt;strong&gt;MyAppInstaller_mcr.app&lt;/strong&gt; into the Terminal window to insert its path,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>press Enter, and launch the installer again.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Developed by Shuang Liang · University of Pittsburgh</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>COSMIC OptiLayout · Developed by Shuang Liang · University of Pittsburgh</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1">&lt;/body&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/html&gt;</span></p>
 </body>
