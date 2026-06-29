@@ -3,378 +3,419 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COSMIC OptiLayout</title>
-
+  <title>COSMIC OptiLayout - Optical Layout Design Software</title>
+  <meta name="description" content="COSMIC OptiLayout is an interactive optical layout design and 2D ray-tracing software for research laboratories.">
   <style>
-    * { box-sizing: border-box; }
-
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background: #050816;
-      color: #ffffff;
+      background: #050711;
+      color: white;
+      overflow-x: hidden;
     }
-
-    a { color: inherit; }
-
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(75,130,255,0.28), transparent 32%),
+        radial-gradient(circle at 80% 10%, rgba(137,80,255,0.25), transparent 34%),
+        radial-gradient(circle at 50% 90%, rgba(0,220,255,0.15), transparent 40%);
+      z-index: -3;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(115deg, transparent 0%, transparent 47%, rgba(120,220,255,0.18) 49%, transparent 51%, transparent 100%),
+        linear-gradient(25deg, transparent 0%, transparent 55%, rgba(124,92,255,0.14) 56%, transparent 58%, transparent 100%);
+      background-size: 900px 900px;
+      animation: lightMove 18s linear infinite;
+      z-index: -2;
+    }
+    @keyframes lightMove {
+      from { background-position: 0 0; }
+      to { background-position: 900px 500px; }
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
     .nav {
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 50;
+      padding: 16px 7%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 18px 8%;
-      background: rgba(5, 8, 22, 0.72);
+      justify-content: space-between;
+      background: rgba(5, 7, 17, 0.72);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-
-    .logo {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-weight: 800;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
     }
-
+    .brand img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+    }
     .nav-links a {
       margin-left: 22px;
-      text-decoration: none;
-      color: #cbd5ff;
-      font-weight: 600;
+      color: #c8d4ff;
+      font-weight: 650;
       font-size: 14px;
     }
-
     .hero {
       min-height: 92vh;
-      padding: 90px 8%;
+      padding: 90px 7%;
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
       gap: 60px;
       align-items: center;
-      background:
-        radial-gradient(circle at 18% 18%, rgba(78, 111, 255, 0.38), transparent 32%),
-        radial-gradient(circle at 80% 16%, rgba(171, 92, 255, 0.35), transparent 30%),
-        radial-gradient(circle at 50% 90%, rgba(0, 212, 255, 0.16), transparent 38%);
     }
-
     .badge {
       display: inline-block;
-      padding: 8px 14px;
+      padding: 8px 15px;
       border-radius: 999px;
-      background: rgba(124, 92, 255, 0.18);
-      border: 1px solid rgba(151, 129, 255, 0.4);
-      color: #dcd7ff;
-      font-weight: 700;
-      font-size: 14px;
+      background: rgba(124,92,255,0.18);
+      border: 1px solid rgba(160,145,255,0.45);
+      color: #e3ddff;
+      font-weight: 800;
       margin-bottom: 22px;
     }
-
     h1 {
-      font-size: clamp(48px, 7vw, 82px);
+      font-size: clamp(50px, 7vw, 88px);
       line-height: 1.02;
       margin: 0 0 22px;
-      letter-spacing: -2px;
+      letter-spacing: -2.5px;
     }
-
-    .gradient-text {
-      background: linear-gradient(90deg, #ffffff, #9fb4ff, #8ef3ff);
+    .gradient {
+      background: linear-gradient(90deg, #ffffff, #9fb8ff, #72f0ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
     .subtitle {
       max-width: 720px;
+      color: #c8d4ff;
       font-size: 22px;
-      line-height: 1.6;
-      color: #cbd5ff;
+      line-height: 1.65;
       margin-bottom: 34px;
     }
-
     .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 15px;
     }
-
     .btn {
       display: inline-block;
       padding: 15px 24px;
       border-radius: 999px;
-      text-decoration: none;
       font-weight: 800;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: 0.22s;
     }
-
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
-
     .primary {
-      background: linear-gradient(135deg, #7c5cff, #24c6ff);
-      color: white;
-      box-shadow: 0 14px 38px rgba(72, 112, 255, 0.38);
+      background: linear-gradient(135deg, #7c5cff, #26c6ff);
+      box-shadow: 0 16px 45px rgba(64,130,255,0.42);
     }
-
     .secondary {
-      border: 1px solid rgba(180,190,255,0.42);
-      color: #e3e8ff;
+      border: 1px solid rgba(200,210,255,0.38);
       background: rgba(255,255,255,0.06);
+      color: #e6ebff;
     }
-
-    .hero-card {
-      border-radius: 30px;
+    .hero-visual {
+      position: relative;
+      transform: perspective(1000px) rotateY(-7deg) rotateX(4deg);
+      transition: 0.3s;
+    }
+    .hero-visual:hover {
+      transform: perspective(1000px) rotateY(-3deg) rotateX(2deg) translateY(-8px);
+    }
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: -35px;
+      background: radial-gradient(circle, rgba(69,170,255,0.38), transparent 62%);
+      filter: blur(28px);
+      z-index: -1;
+    }
+    .preview-card {
       padding: 16px;
+      border-radius: 32px;
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.16);
-      box-shadow: 0 35px 100px rgba(0,0,0,0.52);
+      box-shadow: 0 38px 110px rgba(0,0,0,0.6);
       backdrop-filter: blur(18px);
     }
-
-    .hero-card img {
+    .preview-card img {
       width: 100%;
+      border-radius: 24px;
       display: block;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.13);
     }
-
     section {
-      padding: 82px 8%;
       max-width: 1240px;
       margin: auto;
+      padding: 86px 7%;
     }
-
     h2 {
-      font-size: 42px;
+      font-size: 44px;
+      letter-spacing: -1px;
       margin: 0 0 18px;
-      letter-spacing: -0.8px;
     }
-
     .section-text {
+      color: #c8d4ff;
       font-size: 18px;
       line-height: 1.75;
-      color: #cbd5ff;
-      max-width: 850px;
+      max-width: 880px;
     }
-
-    .features {
-      margin-top: 34px;
+    .feature-grid, .download-grid, .application-grid {
+      margin-top: 36px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
-
     .card {
-      padding: 25px;
-      border-radius: 24px;
+      padding: 26px;
+      border-radius: 26px;
       background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.045));
       border: 1px solid rgba(255,255,255,0.13);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.22);
+      transition: 0.25s;
     }
-
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(120,220,255,0.42);
+    }
     .card h3 {
       margin: 0 0 10px;
-      font-size: 21px;
+      font-size: 22px;
     }
-
     .card p {
-      color: #cbd5ff;
-      line-height: 1.6;
       margin: 0;
+      color: #c8d4ff;
+      line-height: 1.6;
     }
-
-    .screenshot {
+    .icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+    .big-screenshot {
       width: 100%;
-      margin-top: 30px;
-      border-radius: 26px;
+      margin-top: 32px;
+      border-radius: 30px;
       border: 1px solid rgba(255,255,255,0.14);
-      box-shadow: 0 30px 90px rgba(0,0,0,0.48);
+      box-shadow: 0 34px 100px rgba(0,0,0,0.5);
     }
-
-    .download-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
-      margin-top: 34px;
-    }
-
     .download-card {
-      padding: 30px;
-      border-radius: 26px;
+      padding: 32px;
+      border-radius: 30px;
       background:
-        linear-gradient(145deg, rgba(124,92,255,0.24), rgba(36,198,255,0.08)),
-        rgba(255,255,255,0.055);
+        linear-gradient(145deg, rgba(124,92,255,0.25), rgba(38,198,255,0.08)),
+        rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.16);
     }
-
     .download-card h3 {
+      font-size: 28px;
       margin: 0 0 12px;
-      font-size: 27px;
     }
-
     .download-card p {
-      color: #cbd5ff;
+      color: #c8d4ff;
+      min-height: 55px;
       line-height: 1.6;
-      min-height: 56px;
     }
-
     pre {
-      background: #020412;
-      color: #dce6ff;
+      background: #020410;
+      color: #e3eaff;
       padding: 18px;
       border-radius: 16px;
       overflow-x: auto;
       border: 1px solid rgba(255,255,255,0.12);
     }
-
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .roadmap div {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #dce5ff;
+    }
     .footer {
+      padding: 50px 7%;
       text-align: center;
-      padding: 46px 8%;
-      color: #9aa8da;
+      color: #9aa8d8;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
-
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
         text-align: center;
       }
-
       .buttons {
         justify-content: center;
       }
-
+      .hero-visual {
+        transform: none;
+      }
       .nav {
         flex-direction: column;
         gap: 12px;
       }
-
       .nav-links a {
-        margin: 0 10px;
+        margin: 0 9px;
       }
     }
   </style>
 </head>
-
 <body>
-
   <nav class="nav">
-    <div class="logo">COSMIC OptiLayout</div>
+    <div class="brand">
+      <img src="assets/logo.png" alt="COSMIC OptiLayout logo">
+      <span>COSMIC OptiLayout</span>
+    </div>
     <div class="nav-links">
       <a href="#features">Features</a>
-      <a href="#screenshot">Screenshot</a>
+      <a href="#preview">Preview</a>
       <a href="#download">Download</a>
       <a href="https://github.com/shuang730/COSMIC-OptiLayout">GitHub</a>
     </div>
   </nav>
-
   <main class="hero">
     <div>
       <div class="badge">v1.1 · macOS & Windows</div>
-      <h1><span class="gradient-text">Optical layouts,</span><br>built visually.</h1>
+      <h1>
+        <span class="gradient">Optical layouts,</span><br>
+        built visually.
+      </h1>
       <p class="subtitle">
-        COSMIC OptiLayout is an interactive optical layout design and 2D ray-tracing tool
+        COSMIC OptiLayout is a modern optical layout design and 2D ray-tracing tool
         developed in MATLAB for research laboratories.
       </p>
-
       <div class="buttons">
         <a class="btn primary" href="https://github.com/shuang730/COSMIC-OptiLayout/releases/latest">
           Download Latest Version
         </a>
         <a class="btn secondary" href="https://github.com/shuang730/COSMIC-OptiLayout">
-          View Source
+          View on GitHub
         </a>
       </div>
     </div>
-
-    <div class="hero-card">
-      <img src="screenshots/interface.png" alt="COSMIC OptiLayout interface">
+    <div class="hero-visual">
+      <div class="preview-card">
+        <img src="screenshots/interface.png" alt="COSMIC OptiLayout interface">
+      </div>
     </div>
   </main>
-
   <section>
-    <h2>Designed for optical research</h2>
+    <h2>Designed by researchers, for researchers.</h2>
     <p class="section-text">
-      Quickly build, visualize, measure, and export 2D optical layouts. COSMIC OptiLayout is designed
-      for experimental optics, lab planning, discussion, documentation, and presentation figures.
+      COSMIC OptiLayout focuses on fast optical layout design, real-time ray tracing,
+      flexible component editing, measurement, alignment, and figure export.
+      It is made for lab planning, optical discussions, teaching, reports, and presentations.
     </p>
   </section>
-
   <section id="features">
     <h2>Features</h2>
-
-    <div class="features">
+    <div class="feature-grid">
       <div class="card">
+        <div class="icon">⚡</div>
         <h3>Real-time 2D Ray Tracing</h3>
-        <p>Visualize optical paths interactively while editing sources and components.</p>
+        <p>Visualize optical paths instantly while editing light sources and optical components.</p>
       </div>
-
       <div class="card">
+        <div class="icon">💡</div>
         <h3>Parallel & Point Sources</h3>
-        <p>Adjust angle, beam width, ray count, emission range, and ray color.</p>
+        <p>Adjust beam width, angle, ray count, emission angles, and ray colors.</p>
       </div>
-
       <div class="card">
+        <div class="icon">🔬</div>
         <h3>Optical Components</h3>
         <p>Lens, Objective, Mirror, Beam Splitter, Pinhole, Camera, and Surface.</p>
       </div>
-
       <div class="card">
-        <h3>Editable Properties</h3>
-        <p>Control position, rotation, diameter, focal length, numerical aperture, and aperture size.</p>
+        <div class="icon">🎛️</div>
+        <h3>Editable Parameters</h3>
+        <p>Modify position, rotation, diameter, focal length, NA, aperture, and more.</p>
       </div>
-
       <div class="card">
-        <h3>Measurement Modes</h3>
+        <div class="icon">📏</div>
+        <h3>Measurement Tools</h3>
         <p>Measure point-to-point and surface-to-surface distances directly in the layout.</p>
       </div>
-
       <div class="card">
-        <h3>Export Figures</h3>
-        <p>Save layouts as PNG or PDF for reports, slides, and lab documentation.</p>
-      </div>
-
-      <div class="card">
+        <div class="icon">🎯</div>
         <h3>Alignment Tools</h3>
-        <p>Automatically align selected components along X or Y directions.</p>
+        <p>Automatically align selected components along the X or Y direction.</p>
       </div>
-
       <div class="card">
-        <h3>Productivity</h3>
+        <div class="icon">🖼️</div>
+        <h3>PNG / PDF Export</h3>
+        <p>Export clean optical layout figures for reports, slides, and documentation.</p>
+      </div>
+      <div class="card">
+        <div class="icon">↩️</div>
+        <h3>Productivity Workflow</h3>
         <p>Save/load layouts, undo/redo, box selection, zoom, pan, and view lock.</p>
       </div>
     </div>
   </section>
-
-  <section id="screenshot">
-    <h2>Interface</h2>
+  <section id="preview">
+    <h2>Software Preview</h2>
     <p class="section-text">
-      A visual workspace for designing optical systems with editable components and interactive ray tracing.
+      Build and edit optical systems visually with a practical interface designed for experimental optics.
     </p>
-    <img class="screenshot" src="screenshots/interface.png" alt="COSMIC OptiLayout screenshot">
+    <img class="big-screenshot" src="screenshots/interface.png" alt="COSMIC OptiLayout screenshot">
   </section>
-
+  <section>
+    <h2>Applications</h2>
+    <p class="section-text">
+      COSMIC OptiLayout is designed for optical research, teaching, and experimental planning.
+    </p>
+    <div class="application-grid">
+      <div class="card"><h3>Optical Layout Design</h3><p>Quickly sketch and test experimental optical paths.</p></div>
+      <div class="card"><h3>Beam Alignment</h3><p>Plan laser paths, mirrors, beam splitters, and detection geometry.</p></div>
+      <div class="card"><h3>Microscope Systems</h3><p>Represent objectives, imaging paths, cameras, and apertures.</p></div>
+      <div class="card"><h3>Teaching</h3><p>Use interactive ray tracing to explain geometric optics concepts.</p></div>
+    </div>
+  </section>
   <section id="download">
     <h2>Download</h2>
     <p class="section-text">
-      Download the latest precompiled release for your operating system from GitHub Releases.
+      Download the latest precompiled release for macOS or Windows.
     </p>
-
     <div class="download-grid">
       <div class="download-card">
         <h3>macOS</h3>
-        <p>Download the latest macOS package from the Releases page.</p>
+        <p>Download the latest macOS installer from GitHub Releases.</p>
         <a class="btn primary" href="https://github.com/shuang730/COSMIC-OptiLayout/releases/latest">
           Download macOS
         </a>
       </div>
-
       <div class="download-card">
         <h3>Windows</h3>
-        <p>Download the latest Windows installer from the Releases page.</p>
+        <p>Download the latest Windows installer from GitHub Releases.</p>
         <a class="btn primary" href="https://github.com/shuang730/COSMIC-OptiLayout/releases/latest">
           Download Windows
         </a>
       </div>
-
       <div class="download-card">
         <h3>Source Code</h3>
         <p>View the MATLAB App Designer source code on GitHub.</p>
@@ -384,27 +425,39 @@
       </div>
     </div>
   </section>
-
   <section>
     <h2>macOS Installation Note</h2>
     <p class="section-text">
       If macOS reports that <strong>MyAppInstaller_mcr.app</strong> is damaged and cannot be opened,
       this is caused by macOS Gatekeeper. The installer is not actually damaged.
     </p>
-
     <p class="section-text">Open Terminal and run:</p>
-
     <pre>xattr -dr com.apple.quarantine</pre>
-
     <p class="section-text">
       Then drag <strong>MyAppInstaller_mcr.app</strong> into the Terminal window to insert its path,
       press Enter, and launch the installer again.
     </p>
   </section>
-
+  <section>
+    <h2>Roadmap</h2>
+    <p class="section-text">Planned features for future versions:</p>
+    <div class="roadmap">
+      <div>Curved mirrors</div>
+      <div>Prisms</div>
+      <div>Gaussian beams</div>
+      <div>ABCD matrix tools</div>
+      <div>Polarization elements</div>
+      <div>Tube lens system</div>
+      <div>More export formats</div>
+      <div>Template optical layouts</div>
+    </div>
+  </section>
   <footer class="footer">
-    COSMIC OptiLayout · Developed by Shuang Liang · University of Pittsburgh
+    <p>
+      <strong>COSMIC OptiLayout</strong><br>
+      Developed by Shuang Liang · University of Pittsburgh<br>
+      MIT License · Built with MATLAB App Designer
+    </p>
   </footer>
-
 </body>
 </html>
