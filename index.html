@@ -425,19 +425,31 @@
       </div>
     </div>
   </section>
-  <section>
-    <h2>macOS Installation Note</h2>
-    <p class="section-text">
-      If macOS reports that <strong>MyAppInstaller_mcr.app</strong> is damaged and cannot be opened,
-      this is caused by macOS Gatekeeper. The installer is not actually damaged.
-    </p>
-    <p class="section-text">Open Terminal and run:</p>
-    <pre>xattr -dr com.apple.quarantine</pre>
-    <p class="section-text">
-      Then drag <strong>MyAppInstaller_mcr.app</strong> into the Terminal window to insert its path,
-      press Enter, and launch the installer again.
-    </p>
-  </section>
+<section>
+  <h2>macOS Installation Note</h2>
+
+  <p class="section-text">
+    If macOS reports that <strong>MyAppInstaller_mcr.app</strong> is damaged and cannot be opened,
+    this is caused by macOS Gatekeeper. The installer is not actually damaged.
+  </p>
+
+  <p class="section-text">
+    To fix this, open <strong>Terminal</strong> and type the following command, but do not press Enter yet:
+  </p>
+
+  <pre>xattr -dr com.apple.quarantine </pre>
+
+  <p class="section-text">
+    Make sure there is a space after <code>quarantine</code>. Then drag
+    <strong>MyAppInstaller_mcr.app</strong> from Finder directly into the Terminal window.
+    Terminal will automatically insert the correct file path.
+  </p>
+
+  <p class="section-text">
+    After the full command appears in Terminal, press <strong>Enter</strong>.
+    Then launch the installer again.
+  </p>
+</section>
   <section>
     <h2>Roadmap</h2>
     <p class="section-text">Planned features for future versions:</p>
